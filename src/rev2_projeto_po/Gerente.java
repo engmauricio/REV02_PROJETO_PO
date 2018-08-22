@@ -5,11 +5,13 @@
  */
 package rev2_projeto_po;
 
+import java.io.Serializable;
+
 /**
  *
  * @author EngMauricio
  */
-public class Gerente extends Funcionarios {
+public class Gerente extends Funcionarios implements Serializable, Autenticavel{
     
     public Gerente(){
         
@@ -27,6 +29,19 @@ public class Gerente extends Funcionarios {
     @Override
     public String adicionado(){
         return "o gerente foi adicionado com sucesso.";
+    }
+
+    @Override
+    public Boolean autentica(String login, String senha) {
+        String Login = "admin";
+        String Senha = "123";
+        Boolean msg;
+        if(Login.equals(login) && Senha.equals(senha)){
+            msg = true;
+        }else {
+            msg = false;
+        }
+        return msg;
     }
     
 }

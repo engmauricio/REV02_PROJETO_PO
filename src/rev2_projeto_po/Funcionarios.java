@@ -5,13 +5,14 @@
  */
 package rev2_projeto_po;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author EngMauricio
  */
-public class Funcionarios {
+public class Funcionarios implements Serializable{
     
     private String nome;
     private String cpf;

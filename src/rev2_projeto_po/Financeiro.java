@@ -5,11 +5,13 @@
  */
 package rev2_projeto_po;
 
+import java.io.Serializable;
+
 /**
  *
  * @author EngMauricio
  */
-public class Financeiro {
+public class Financeiro implements Serializable{
     
     private Double EntCapital;
     private Double SaiCapital;

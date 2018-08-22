@@ -5,11 +5,13 @@
  */
 package rev2_projeto_po;
 
+import java.io.Serializable;
+
 /**
  *
  * @author EngMauricio
  */
-public class EmpServ extends Funcionarios {
+public class EmpServ extends Funcionarios implements Serializable{
     
      public EmpServ(){
         

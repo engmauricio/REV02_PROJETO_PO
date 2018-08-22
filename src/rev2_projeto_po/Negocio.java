@@ -5,11 +5,13 @@
  */
 package rev2_projeto_po;
 
+import java.io.Serializable;
+
 /**
  *
  * @author EngMauricio
  */
-public class Negocio {
+public class Negocio implements Serializable{
     
     private Double quan;
     private Double preco;

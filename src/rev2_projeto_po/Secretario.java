@@ -5,11 +5,13 @@
  */
 package rev2_projeto_po;
 
+import java.io.Serializable;
+
 /**
  *
  * @author EngMauricio
  */
-public class Secretario extends Funcionarios {
+public class Secretario extends Funcionarios implements Serializable, Autenticavel {
     
     public Secretario(){
 
@@ -27,4 +29,16 @@ public class Secretario extends Funcionarios {
       public String adicionado(){
         return "o secretario foi adicionado com sucesso.";
     }  
+       @Override
+    public Boolean autentica(String login, String senha) {
+        String Login = "subadmin";
+        String Senha = "123";
+        Boolean msg;
+        if(Login.equals(login) && Senha.equals(senha)){
+            msg = true;
+        }else {
+            msg = false;
+        }
+        return msg;
+    }
 }

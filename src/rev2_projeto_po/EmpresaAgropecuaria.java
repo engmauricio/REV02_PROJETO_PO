@@ -5,13 +5,14 @@
  */
 package rev2_projeto_po;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author EngMauricio
  */
-public class EmpresaAgropecuaria {
+public class EmpresaAgropecuaria implements Serializable{
   
     Double r = 0.0;
     Double Resul = 0.0;
@@ -81,7 +82,7 @@ public class EmpresaAgropecuaria {
         switch(negocio.getTipoNegocio()){
             
             case 1: //tipo de negocio gado
-                Resul = Resul + 30*negocio.getPreco()*negocio.getQuan();
+                Resul = Resul + 20*negocio.getPreco()*negocio.getQuan();
                 break;
             case 2: // tipo de negocio cacau
               Resul = Resul + 15*negocio.getPreco()*negocio.getQuan();
@@ -93,7 +94,7 @@ public class EmpresaAgropecuaria {
             default:
                 break;
         }
-       
+        
           return Resul;
     }
     
@@ -132,6 +133,7 @@ public class EmpresaAgropecuaria {
     }
     public Funcionarios procurarfuncionarios(String cpf){
         Funcionarios emp = null;
+        
         for(Funcionarios f: func){
             if(f.getCpf().equals(cpf)){
                 
